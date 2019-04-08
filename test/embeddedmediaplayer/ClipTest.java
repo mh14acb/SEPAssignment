@@ -97,7 +97,10 @@ public class ClipTest {
     
     @Test
     public void testSetStartToValidPositiveNumber() 
-    {    
+    {
+       // _clip.setStart(4);
+        //assertFalse(_clip.setStart(4) == -2);
+               
     }
     
     
