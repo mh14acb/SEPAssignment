@@ -18,7 +18,10 @@ import static org.junit.Assert.*;
  */
 public class ClipTest {
     
+    private Clip _clip;
+    
     public ClipTest() {
+        _clip = new Clip();
     }
     
     @BeforeClass
@@ -43,6 +46,11 @@ public class ClipTest {
     @Test
     public void testSetTitleToEmptyStringKeepsPreviousValue()
     {
+        String expectedTitle = "This is a title";
+        _clip.setTitle(expectedTitle);
+        _clip.setTitle("");
+        _clip.setTitle(null);
+        assertEquals(expectedTitle, _clip.getTitle());
     }
 
     @Test
